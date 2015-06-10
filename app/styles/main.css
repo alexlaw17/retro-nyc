@@ -7332,12 +7332,22 @@ h6 {
 
 .thumb-frame {
   position: relative;
-  max-width: 250px;
+  width: 250px;
   margin: auto;
   margin-top: 20px;
   overflow: hidden;
   box-shadow: 0px 5px 17px #888888;
   transition: all .3s ease;
+}
+
+.thumb-frame .img {
+  position: relative;
+  display: block;
+  transition: all .3s ease;
+}
+
+.thumb-frame .img:hover {
+  transform: scale(1.1);
 }
 
 .thumb-frame:hover {
@@ -7355,7 +7365,7 @@ h6 {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 350px;
   background-color: rgba(135, 189, 177, 0.8);
   opacity: 0;
   transition: all 0.3s ease;
@@ -7435,7 +7445,7 @@ h6 {
   text-align: center;
   border-radius: 50%;
   box-shadow: 0 5px 10px rgba(34, 34, 34, 0.4);
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0, 0.89, 0, 1);
 }
 
 .social-media a:hover {
