@@ -1,0 +1,340 @@
+// ----------------------------------------------
+// 	Import
+// ----------------------------------------------
+
+@import "../bower_components/bootstrap/less/bootstrap.less";
+@import "variables.less";
+@import url(http://fonts.googleapis.com/css?family=Lora|Open+Sans:400,600);
+@import "fonts.less";
+
+// ----------------------------------------------
+// 	Basic Stuff
+// ----------------------------------------------
+html,
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: #FAFAFA;
+}
+
+* {
+    outline: none !important;
+    &:focus, &:hover, &:active {
+        outline: none !important;
+    }
+}
+a {
+    &:hover, &:focus, &:active {
+        text-decoration: none;
+    }
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    .lora;
+}
+
+// ----------------------------------------------
+// 	Styles
+// ----------------------------------------------
+
+.wrapper {
+	height: 100%;
+	width: 100%;
+}
+
+.oshead {
+	color: @black;
+	text-align: center;
+	.openSans;
+	text-transform: uppercase;
+	font-size: 2.5rem;
+	letter-spacing: 3px;
+	font-weight: bold;
+}
+
+.black-hr {
+	max-width: 730px;
+	border-top: 1px solid @black;
+}
+.sm-black-hr {
+	max-width: 30px;
+	border-top: 1px solid @black;
+}
+
+.sm-container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  @media (min-width: 1200px) {
+	width: 970px;
+  }
+   @media (min-width: 992px) {
+	width: 850px;
+  }
+}
+
+
+.navbar-default {
+  background-color: transparent;
+  border-color: transparent;
+
+  a {
+  	.openSans;
+  	text-transform: uppercase;
+  	letter-spacing: 3px;
+  	font-weight: bold;
+  	font-size: 1.2rem;
+  }
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: @black;
+  padding: 5px 10px;
+  &:hover {
+  	color: @seaBlue;
+  }
+}
+
+
+.colorNav {
+	background-color: rgba(212, 215, 206, .7);
+	position: fixed;
+	top: 0;
+	height:33px;
+	width: 100%;
+	box-shadow: 0px 5px 5px rgba(150, 150, 150, 0.7);
+	z-index: 5;
+	display:none;
+}
+
+// ----------------------------------------------
+// 	Hero;
+// ----------------------------------------------
+
+.hero {
+	min-height: 650px;
+	width: 100%;
+	background: url('../images/dream-city.jpg') fixed;
+	background-position: center -380px;
+	background-repeat: no-repeat;
+	postion: relative;
+
+	.hero-intro {
+		margin-top: 10rem;
+		ul {
+			list-style-type: none;
+			text-align: center;
+			padding-bottom: 15rem;
+			li {
+				display: inline-block;
+				padding: 0 50px;
+				a {
+					.openSans;
+					font-size: 1.4rem;
+					color: #fff;
+					letter-spacing: 3px;
+					font-weight: bold;
+					&:hover {
+						color: @black;
+					}
+				}
+			}
+		}
+		h1 {
+			color: #fff;
+			text-align: center;
+			font-size: 3rem;
+			letter-spacing: 3px;
+		}
+		h3 {
+			text-align: center;
+			color: #fff;
+			.lora;
+			letter-spacing: 3px;
+		}
+		hr {
+			width: 30px;
+		}
+	}
+}
+
+.intro-frame {
+	margin-top: 10rem;
+	width: 100%;
+
+	h1 {
+		color: @black;
+		text-align: center;
+		.openSans;
+		text-transform: uppercase;
+		font-size: 2.5rem;
+		letter-spacing: 3px;
+		font-weight: bold;
+	}
+
+	hr {
+		max-width: 30px;
+		border-top: 1px solid @black;
+	}
+	h3 {
+		font-size: 1.6rem;
+		line-height: 2.8rem;
+		text-align: center;
+	}
+}
+
+.subject-frame {
+	text-align: center;
+	padding-top: 50px;
+
+	.skyline {
+		height: 200px;
+	}
+
+	h1 {
+		padding: 20px 0;
+	}
+
+}
+
+.neighborhood {
+	img {
+		margin: auto;
+	}
+}
+
+// Image hover 
+.thumb-frame {
+	position: relative;
+	overflow: hidden;
+	margin-top: 20px;
+	box-shadow: 0px 5px 17px #888888;
+	max-width: 250px;
+	margin: auto;
+	transition: all .3s ease;
+	&:hover {
+		transform: translateY(-5px);
+		box-shadow: 0px 10px 17px #888888;
+	}
+	&:active {
+		transform: translateY(5px);
+		box-shadow: 0px 0px 17px #888888;
+	}
+	
+	.mask-frame {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		opacity: 0;
+		transition: all 0.3s ease;
+		top: 0;
+		left: 0;
+		background-color: rgba(135, 189, 177, 0.8);
+		&:hover {
+			opacity: 1;
+		}
+		.mask-content {
+			position: absolute;
+			width: 100%;
+			top: 50%;
+			transform: translateY(-50%);
+			margin: auto;
+			padding-left: 5px;
+			padding-right: 5px;
+			h5 {
+				font-size: 1.7rem;
+				color: #fff;
+				text-align: center;
+				.lora;
+				letter-spacing: .4rem;
+			}
+		}
+	}
+}
+
+// ----------------------------------------------
+// 	About
+// ----------------------------------------------
+
+.about-frame {
+	margin-top: 8rem;
+	margin-bottom: 8rem;
+	h3 {
+		font-size: 1.6rem;
+		line-height: 2.8rem;
+		text-align: center;
+	}
+}
+
+.sub-heading {
+	width: 100%;
+	height: 370px;
+	background: url('../images/retro-soho.jpg') fixed; 
+	background-position: center bottom;
+	background-repeat: no-repeat;
+}
+
+// ----------------------------------------------
+// 	Last Frame
+// ----------------------------------------------
+
+.last-frame {
+	width: 100%;
+	background-color: @beachBlue;
+	padding: 35px 0;
+
+
+	h4 {
+		font-size: 1.4rem;
+		line-height: 2.8rem;
+		text-align: center;
+		color: #fff;
+		margin-top: 20px;
+		.openSans;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+	}
+}
+.social-media {
+	width: 209px;
+	margin: 0 auto;
+	height: 52px;
+
+	a {
+		color: #fff;
+		text-align: center;
+		width: 45px;
+		height: 45px;
+		border-radius: 50%;
+		display: inline-block;
+		box-shadow: 0px 5px 10px rgba(34, 34, 34, 0.4);
+		font-size:  22px;
+		padding-top: 8px;
+		transition: all 0.3s ease;
+		&:hover {
+			transform: translateY(-4px);
+			box-shadow: 0px 10px 10px rgba(34, 34, 34, 0.4);
+		}
+		&:active {
+			transform: translateY(4px);
+			box-shadow: 0px 0px 4px rgba(34, 34, 34, 0.4);
+		}
+	}
+
+	.fb {
+		background-color: #3B5998;
+		margin: 0 33px;
+	}
+
+	.twitter {
+		background-color: #4CB5FF;
+	}
+
+	.google {
+		background-color: #E93045;
+	}
+
+}
